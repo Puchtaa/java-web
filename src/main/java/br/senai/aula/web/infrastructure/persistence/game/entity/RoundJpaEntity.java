@@ -45,4 +45,3 @@ public class RoundJpaEntity {
     public GameJpaEntity getGame() {
         return game;
     }
-}
