@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf0b7a08-7729-4ac6-abd1-f0e7f734cb40" name="Changes" comment="Criados os port/in/out&#10;Criados os services/&#10;Criados os web/controler/request/response">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/AddPlayerToGameUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/CreateDeckUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/FinishRoundUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/GetGamePlayersUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/GetGameUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/GetRoundUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/StartGameUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/in/StartRoundUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/out/DeckRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/out/GameRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/out/PlayersRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/port/out/RoundRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/AddPlayerToGameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/CreateDeckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/GetGamePlayersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/GetGameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/GetRoundService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/StartGameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/application/service/StartRoundService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/request/AddPlayerRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/request/StartGameRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/response/DeckResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/response/GameResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/response/PlayerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/infrastructure/web/game/response/RoundResponse.java" afterDir="false" />
+    <list default="true" id="bf0b7a08-7729-4ac6-abd1-f0e7f734cb40" name="Changes" comment="criado os port/in/out&#10;criado os services&#10;criado os web/controller/request/response">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/senai/aula/web/config/GameConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,5 +89,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="criado os port/in/out&#10;criado os services&#10;criado os web/controller/request/response" />
+    <MESSAGE value="criado o GameConfig dentro de Config com todas as dependências juntas." />
+    <option name="LAST_COMMIT_MESSAGE" value="criado o GameConfig dentro de Config com todas as dependências juntas." />
   </component>
 </project>
