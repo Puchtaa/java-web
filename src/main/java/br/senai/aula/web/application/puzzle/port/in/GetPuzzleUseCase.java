@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface GetPuzzleUseCase {
 
-    Optional<Puzzle> findById(Long id);
+    Puzzle findById(Long id);
 
     Puzzle[] findAll();
 }
