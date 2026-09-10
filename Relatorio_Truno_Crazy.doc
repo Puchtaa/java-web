@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Relatório do Projeto Truno Crazy</title>
+<style>
+body { font-family: Calibri, Arial, sans-serif; color: #222; margin: 2.5cm; line-height: 1.35; }
+h1 { color: #1f4e79; text-align: center; font-size: 26pt; margin-bottom: 6pt; }
+h2 { color: #1f4e79; border-bottom: 1px solid #9fbad0; padding-bottom: 4pt; margin-top: 22pt; }
+h3 { color: #365f91; margin-bottom: 4pt; }
+p { text-align: justify; }
+table { border-collapse: collapse; width: 100%; margin: 10pt 0 16pt; }
+th { background: #1f4e79; color: white; padding: 7pt; text-align: left; }
+td { border: 1px solid #b7c9d6; padding: 7pt; vertical-align: top; }
+tr:nth-child(even) { background: #f2f6f8; }
+.cover { text-align: center; margin-top: 170pt; }
+.subtitle { font-size: 15pt; color: #365f91; }
+.meta { margin-top: 50pt; font-size: 12pt; }
+.ok { color: #1b6e2d; font-weight: bold; }
+.attention { color: #9c6500; font-weight: bold; }
+.small { font-size: 10pt; color: #555; }
+ul { margin-top: 4pt; }
+</style>
+</head>
+<body>
+<div class="cover">
+<h1>Relatório do Projeto</h1>
+<p class="subtitle"><strong>Truno Crazy</strong></p>
+<p class="subtitle">Jogo de cartas competitivo inspirado em Truco e UNO</p>
+<div class="meta">
+<p><strong>Curso/Disciplina:</strong> Desenvolvimento de Sistemas</p>
+<p><strong>Tecnologias:</strong> Java, Spring Boot, API REST, JPA e banco H2</p>
+<p><strong>Data:</strong> 03 de setembro de 2026</p>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+
+<h2>1. Identificação do projeto</h2>
+<table>
+<tr><th>Item</th><th>Informação</th></tr>
+<tr><td><strong>Nome do projeto</strong></td><td>Truno Crazy</td></tr>
+<tr><td><strong>Tema escolhido</strong></td><td>Jogo de cartas digital competitivo, com elementos de Truco e UNO.</td></tr>
+<tr><td><strong>Integrantes</strong></td><td>Bruno, Fernanda, Leonardo, Lucas e Rafael.</td></tr>
+<tr><td><strong>Responsabilidades</strong></td><td>Documentação: Leonardo e Fernanda; requisitos: todos; lógica e regras: Bruno e Lucas; revisão do código: Lucas, Rafael e Bruno; testes: Leonardo e Fernanda; organização e entrega: Rafael. Responsável pela estruturação das classes: a definir.</td></tr>
+</table>
+
+<h2>2. Descrição geral da ideia</h2>
+<p>O Truno Crazy é um jogo de cartas para amigos e familiares, criado para combinar a competição do Truco com a dinâmica e as cartas especiais do UNO. O objetivo de cada jogador é eliminar todas as cartas da própria mão, conquistar moedas e acumular troféus até alcançar a condição de vitória.</p>
+<p>Durante a partida, os jogadores alternam turnos, podem jogar cartas especiais, comprar cartas quando não possuem uma jogada válida e participar de desafios de Truco. A chamada de Truco aumenta o risco da rodada e permite aceitar, correr ou aumentar a aposta. A proposta busca oferecer uma experiência social, divertida e imprevisível, adequada para partidas entre duas e seis pessoas.</p>
+
+<h2>3. Público e experiência do usuário</h2>
+<h3>Público-alvo</h3>
+<p>O jogo é destinado a grupos de amigos e famílias reunidas, sem limite rígido de idade. A proposta é permitir que pessoas com diferentes níveis de experiência em jogos de cartas possam participar.</p>
+<h3>Experiência principal</h3>
+<p>A experiência deve lembrar uma partida descontraída em família: os jogadores interagem, blefam, tomam decisões rápidas e lidam com reviravoltas causadas pelas cartas especiais. O sistema deve manter a partida dinâmica, com turnos curtos e regras fáceis de acompanhar.</p>
+<h3>Forma de interação</h3>
+<ul>
+<li>O jogador escolhe e joga uma carta durante seu turno.</li>
+<li>O jogador pode comprar uma carta quando não houver jogada válida.</li>
+<li>Os participantes podem chamar Truco, aceitar, correr ou aumentar a aposta.</li>
+<li>Cartas especiais podem pular a vez, inverter a ordem ou forçar compras.</li>
+<li>O placar registra vitórias, derrotas, moedas e troféus.</li>
+</ul>
+
+<h2>4. Classes principais do modelo</h2>
+<p>A tabela abaixo apresenta um modelo mínimo para representar os principais elementos do jogo. Os métodos indicados representam responsabilidades esperadas da regra de negócio e podem ser implementados ou refinados durante a evolução do projeto.</p>
+<table>
+<tr><th>Classe</th><th>Atributos</th><th>Métodos</th><th>Responsabilidade</th></tr>
+<tr><td><strong>Card</strong></td><td>id: Long<br>valor: Valor<br>naipe: Naipe</td><td>newCard(valor, naipe)<br>isSpecial()</td><td>Representar uma carta do baralho, seu valor, naipe e possíveis efeitos.</td></tr>
+<tr><td><strong>Player</strong></td><td>id: Long<br>name: String<br>hand: List&lt;Card&gt;<br>coins: Integer</td><td>playCard(card)<br>drawCard(card)</td><td>Representar o participante, suas cartas e sua pontuação durante a partida.</td></tr>
+<tr><td><strong>Round</strong></td><td>id: Long<br>number: Integer<br>status: StatusRound</td><td>start()<br>end()</td><td>Controlar o estado e o número de cada rodada.</td></tr>
+</table>
+<p class="small"><strong>Observação técnica:</strong> a classe <em>Card</em> já existe no domínio Java com os três atributos solicitados e o método de fábrica <em>newCard</em>. O segundo método listado é uma responsabilidade prevista para a evolução do modelo. A classe <em>Round</em> também já está representada no domínio. A classe <em>Player</em> é uma proposta de modelagem para completar a representação do participante do jogo.</p>
+
+<h2>5. Requisitos funcionais</h2>
+<table>
+<tr><th>ID</th><th>Requisito</th></tr>
+<tr><td>RF01</td><td>O sistema deve permitir criar e cadastrar cartas informando valor e naipe.</td></tr>
+<tr><td>RF02</td><td>O sistema deve permitir consultar uma carta pelo seu identificador.</td></tr>
+<tr><td>RF03</td><td>O sistema deve permitir listar todas as cartas cadastradas.</td></tr>
+<tr><td>RF04</td><td>O sistema deve permitir excluir uma carta pelo seu identificador.</td></tr>
+<tr><td>RF05</td><td>Cada jogador deve iniciar a partida com cinco cartas, e o jogo deve aceitar de dois a seis jogadores.</td></tr>
+<tr><td>RF06</td><td>O sistema deve controlar os turnos, permitindo uma carta por vez e passando a vez automaticamente.</td></tr>
+<tr><td>RF07</td><td>O sistema deve permitir comprar cartas, chamar Truco e aplicar os efeitos das cartas especiais.</td></tr>
+<tr><td>RF08</td><td>O sistema deve declarar a vitória quando o jogador zerar a mão e controlar moedas, troféus e sub wins.</td></tr>
+</table>
+
+<h2>6. Requisitos não funcionais</h2>
+<table>
+<tr><th>ID</th><th>Requisito</th></tr>
+<tr><td>RNF01</td><td>A aplicação deve ser desenvolvida em Java.</td></tr>
+<tr><td>RNF02</td><td>A aplicação deve utilizar Spring Boot para disponibilizar a API.</td></tr>
+<tr><td>RNF03</td><td>A aplicação deve seguir princípios de Clean Architecture e arquitetura hexagonal, separando domínio, aplicação e infraestrutura.</td></tr>
+<tr><td>RNF04</td><td>A API deve seguir um modelo moderno de serviços REST, com responsabilidades separadas entre controllers, casos de uso e repositórios.</td></tr>
+<tr><td>RNF05</td><td>O domínio deve evitar dependência direta de tecnologias externas, como JPA, HTTP e banco de dados.</td></tr>
+<tr><td>RNF06</td><td>O sistema deve possuir testes automatizados para validar os casos de uso e a persistência.</td></tr>
+<tr><td>RNF07</td><td>O código deve ser organizado em pacotes claros e utilizar injeção de dependência.</td></tr>
+</table>
+
+<h2>7. Arquitetura e tecnologias</h2>
+<p>O projeto utiliza arquitetura hexagonal, também conhecida como Ports and Adapters. O domínio concentra os conceitos do jogo, como cartas, valores, naipes e rodadas. A camada de aplicação concentra os casos de uso, como criar, buscar, listar e excluir cartas. A infraestrutura implementa os adaptadores de persistência usando Spring Data JPA e H2.</p>
+<p>Essa separação permite trocar detalhes externos sem alterar as regras centrais. Por exemplo, o repositório de cartas é definido como uma porta no núcleo, enquanto o adapter JPA traduz os objetos de domínio para entidades persistidas no banco.</p>
+<p>Entre as tecnologias utilizadas estão Java 17, Spring Boot, Spring Web, Spring Data JPA, Hibernate, H2, Gradle e JUnit 5.</p>
+
+<h2>8. Checklist de entrega</h2>
+<table>
+<tr><th>Status</th><th>Item</th><th>Atendimento</th></tr>
+<tr><td class="ok">OK</td><td>Nome dos integrantes</td><td>Bruno, Fernanda, Leonardo, Lucas e Rafael.</td></tr>
+<tr><td class="ok">OK</td><td>Nome do projeto</td><td>Truno Crazy.</td></tr>
+<tr><td class="ok">OK</td><td>Tema escolhido</td><td>Jogo de cartas competitivo inspirado em Truco e UNO.</td></tr>
+<tr><td class="ok">OK</td><td>Descrição geral da ideia</td><td>Apresentada na seção 2.</td></tr>
+<tr><td class="ok">OK</td><td>Público e experiência do usuário</td><td>Apresentados na seção 3.</td></tr>
+<tr><td class="ok">OK</td><td>No mínimo 2 classes</td><td>Card, Player e Round.</td></tr>
+<tr><td class="ok">OK</td><td>No mínimo 3 atributos por classe</td><td>Os modelos descritos possuem pelo menos três atributos cada.</td></tr>
+<tr><td class="ok">OK</td><td>No mínimo 2 métodos por classe</td><td>Os métodos esperados estão descritos na seção 4.</td></tr>
+<tr><td class="ok">OK</td><td>No mínimo 4 requisitos funcionais</td><td>Foram definidos oito requisitos funcionais.</td></tr>
+<tr><td class="ok">OK</td><td>No mínimo 3 requisitos não funcionais</td><td>Foram definidos sete requisitos não funcionais.</td></tr>
+</table>
+
+<h2>9. Conclusão</h2>
+<p>O Truno Crazy apresenta uma proposta de jogo de cartas social e competitivo, com regras inspiradas em jogos conhecidos e elementos próprios de apostas, moedas, troféus e cartas especiais. A organização em Java, Spring Boot e arquitetura hexagonal cria uma base adequada para evoluir o projeto, permitindo acrescentar partidas, jogadores, regras e interfaces sem misturar o domínio com os detalhes de infraestrutura.</p>
+</body>
+</html>
