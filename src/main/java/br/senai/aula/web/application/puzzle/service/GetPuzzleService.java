@@ -15,9 +15,9 @@ public class GetPuzzleService implements GetPuzzleUseCase {
     }
 
     @Override
-    public Optional<Puzzle> findById(Long puzzleId) {
-        return Optional.of(puzzleRepository.findById(puzzleId)
-                .orElseThrow(() -> new PuzzleNotFoundException(puzzleId)));
+    public Puzzle findById(Long puzzleId) {
+        return puzzleRepository.findById(puzzleId)
+                .orElseThrow(() -> new PuzzleNotFoundException(puzzleId));
     }
 
     @Override
